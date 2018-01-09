@@ -1,0 +1,44 @@
+mkdir test
+cd test
+git init
+echo "Git is Good" > a.txt
+git add a.txt
+git status
+git commit -am "add test folder and a.txt"
+git status
+
+mkdir subtest
+cd subtest 
+echo "Anything" > b.txt
+touch a1.txt
+touch a2.txt
+git add .
+git status
+git commit -am 'added subtest dir w/ 3 files'
+git log
+
+git remote add origin https://github.com/user/test.git
+vi a.txt #"Github is awesome" added via vi editor 
+git add a.txt
+git status
+git diff a.txt
+git commit -am "edited a.txt"
+git log
+git push origin master
+
+cd subtest
+vi ai.txt #edited file and saved edit
+git add a1.txt
+git status
+git reset
+git status
+git add.a1.txt
+git commit -am 'edited a1.txt'
+git log --oneline
+git revert HEAD
+git log --oneline
+
+git status
+git reset
+git status
+
